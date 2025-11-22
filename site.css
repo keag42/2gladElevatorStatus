@@ -1,0 +1,97 @@
+/* Make the page clean and centered */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+/* Headings */
+h1, h3 {
+    margin-bottom: 20px;
+}
+
+/* Container for status block */
+#status h1 {
+    font-size: 1.4rem;
+    padding: 15px;
+}
+
+/* Base button style */
+button {
+    width: 90%;
+    max-width: 350px;
+    padding: 18px;
+    font-size: 1.2rem;
+    margin: 12px 0;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Green button for working */
+#working {
+    background-color: #28a745;
+}
+
+/* Red button for NOT working */
+#not-working {
+    background-color: #dc3545;
+}
+
+/* Button press animation */
+button:active {
+    transform: scale(0.96);
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    #status h1 {
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 1.1rem;
+        padding: 16px;
+    }
+}
+
+/* Default status box formatting */
+#statusBox {
+    width: 90%;
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* NOT working (red) */
+.status-red {
+    background-color: #ffcccc;
+    color: #b30000;
+}
+
+/* Working (green) */
+.status-green {
+    background-color: #ccffcc;
+    color: #006600;
+}
+
+.icon-green {
+    color: white;
+    background-color: #28a745;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.icon-red {
+    color: white;
+    background-color: #dc3545;
+    padding: 4px 7px;
+    border-radius: 4px;
+}

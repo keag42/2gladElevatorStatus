@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2 glad elevator</title>
+    <link rel="stylesheet" href="site.css">
+
+</head>
+
+<body>
+    <h1>2 gladstone elevator status tracker</h1>
+
+    <div id="statusBox">
+        <h1 id="statusText">The elevator  is currently NOT working</h1>
+    </div>
+
+    <h3 id="time">
+        <span id="dateText"></span>
+        <span id="statusIcon"></span>
+    </h3>
+
+    <button id="working" OnClick="setWorking()">Confirm working</button>
+    <button id="not-working" OnClick="setNotWorking()">Mark as Out of Service</button>
+
+    <script src="logic.js"></script>
+
+</body>
+
+</html>
