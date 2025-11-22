@@ -1,10 +1,14 @@
 /* Make the page clean and centered */
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 20px;
-    text-align: center;
+    font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 /* Headings */
@@ -22,6 +26,7 @@ h1, h3 {
 button {
     width: 90%;
     max-width: 350px;
+    height: 100px;
     padding: 18px;
     font-size: 1.2rem;
     margin: 12px 0;
@@ -29,6 +34,8 @@ button {
     border: none;
     color: white;
     cursor: pointer;
+    display: block;
+    box-sizing: border-box;
 }
 
 /* Green button for working */
@@ -48,15 +55,44 @@ button:active {
 
 /* Mobile-specific tweaks */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 1.4rem;
+
+    /* Make text larger */
+    h1, h3 {
+        font-size: 1.6rem;
     }
-    #status h1 {
-        font-size: 1.2rem;
+
+    #statusBox {
+        padding: 30px;
+        font-size: 1.3rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 20px 0;
+        box-sizing: border-box;
     }
+
+    #statusText {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Put buttons at the bottom naturally */
+    .button-container {
+        margin-top: auto;      /* pushes buttons downward */
+        padding-bottom: 20px;  /* spacing from bottom */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     button {
-        font-size: 1.1rem;
-        padding: 16px;
+        width: 100%;
+        max-width: none;
+        height: 60px;
+        font-size: 1.3rem;
+        padding: 18px;
+        margin: 10px 0;
+        box-sizing: border-box;
     }
 }
 
@@ -68,6 +104,7 @@ button:active {
     padding: 25px;
     border-radius: 15px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* NOT working (red) */
