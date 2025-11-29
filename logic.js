@@ -32,7 +32,7 @@ async function getStatuses() {
             rows.forEach(row => {
                 const li = document.createElement("li");
                 const statusText = row.isUp ? "Working" : "Not Working";
-                const time = row.lastChecked ? new Date(row.lastChecked).toLocaleString() : 'unknown';
+                const time = row.lastChecked ? new Date(row.lastChecked + 'Z').toLocaleString() : 'unknown';
                 li.textContent = `#${row.id}: ${statusText} at ${time}`;
                 statusList.appendChild(li);
             });
@@ -104,7 +104,7 @@ async function getLastStatus() {
         const rows = await res.json();
         if (rows.length > 0) {
             const latest = rows[0];
-            const date = latest.lastChecked ? new Date(latest.lastChecked) : new Date();
+            const date = latest.lastChecked ? new Date(latest.lastChecked + 'Z') : new Date();
             updateStatusUI(latest.isUp, date);
         } else {
             setNotWorking();
